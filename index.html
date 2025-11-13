@@ -3,12 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="script.js" defer></script>
-    <img src="stickman.png"
-
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Hangman Game</h1>
+        
+        <!-- Category and Score -->
+        <p>Category: <span id="category"></span></p>
+        <p>Score: <span id="score">0</span></p>
+        
+        <!-- Hangman Drawing Area -->
+        <div id="hangman-area">
+            <img src="bodyImages/gallows.png">
+            <img src="bodyImages/head.png" id="head">
+            <img src="bodyImages/torse.png" id="torse">
+            <img src="bodyImages/leftArm.png" id="leftArm">
+        </div>
+        
+        
+        
+        <!-- Word Display (blanks) -->
+        <div id="word-display"></div>
+        
+        <!-- Letter Keyboard -->
+        <div id="keyboard"></div>
+        
+        <!-- Win/Lose Message -->
+        <div id="message"></div>
+        
+        <!-- Next Round Button -->
+        <button id="next-btn">Next Round</button>
+    </div>
     
+    <script src="script.js"></script>
 </body>
 </html>

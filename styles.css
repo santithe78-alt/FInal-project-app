@@ -1,0 +1,22 @@
+#hangman-area {
+    position: relative;
+}
+
+#head {
+    position:absolute;
+    top: 575px;
+    left: 385px;
+    
+}
+
+#torse {
+    position: absolute;
+    top: 640px;
+    left: 405px;
+}
+
+#leftArm {
+    position: absolute;
+    top: 650px;
+    left: 315px;
+}
