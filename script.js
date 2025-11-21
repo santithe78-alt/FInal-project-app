@@ -1,14 +1,13 @@
 console.log("helloooo")
 
+// The words that the user need get get and random selected towards them
 
-function listCategories () {
-movies = ['ZombieLand', 'JohnWick', 'titanic', 'matrix']
-people = ['einstein', 'shakespeare', 'newton', 'darwin']
-games = ['Minecraft', 'Doom', 'Apex', 'Fortnite', 'Hangman']
+function getRandomWord(){
+    let movies = ['ZombieLand', 'JohnWick', 'titanic', 'matrix']
+    randomIndex = Math.floor(Math.random() * movies.length);
+    randomWord = movies[randomIndex]
 }
-//console.log(listCategories)
-
-function getRandomWord () {
-const list = wordsByCategory[cat]
-return list[Math.floor(Math.random() * list.length)]
-}
+//let movies = ['ZombieLand', 'JohnWick', 'titanic', 'matrix']
+//let randomIndex = Math.floor(Math.random() * movies.length);
+//let randomWord = movies[randomIndex]
+//console.log(randomWord)
