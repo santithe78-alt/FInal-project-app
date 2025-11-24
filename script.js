@@ -1,13 +1,17 @@
 console.log("helloooo")
 
-// The words that the user need get get and random selected towards them
-
 function getRandomWord(){
     let movies = ['ZombieLand', 'JohnWick', 'titanic', 'matrix']
-    randomIndex = Math.floor(Math.random() * movies.length);
-    randomWord = movies[randomIndex]
+    let randomIndex = Math.floor(Math.random() * movies.length);
+    let randomWord = movies[randomIndex]
+    return randomWord;
 }
-//let movies = ['ZombieLand', 'JohnWick', 'titanic', 'matrix']
-//let randomIndex = Math.floor(Math.random() * movies.length);
-//let randomWord = movies[randomIndex]
-//console.log(randomWord)
+console.log(getRandomWord())
+
+function createBlanks() {
+    const words = getRandomWord();
+    const len = words.length;
+    return len;
+}
+
+console.log(createBlanks())
