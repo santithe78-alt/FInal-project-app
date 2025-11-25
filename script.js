@@ -6,7 +6,6 @@ function getRandomWord(){
     let randomWord = movies[randomIndex]
     return randomWord;
 }
-console.log(getRandomWord())
 
 function createBlanks() {
     const words = getRandomWord();
@@ -15,3 +14,11 @@ function createBlanks() {
 }
 
 console.log(createBlanks())
+console.log(getRandomWord())
+
+
+
+function keyClick(event) {
+    let letter = event.target.innerText;
+console.log(letter)
+}
