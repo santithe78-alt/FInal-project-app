@@ -1,3 +1,82 @@
+* {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    background-image: url("bodyImages/background.png");
+    height: 100vh;
+}
+
+.score-area {
+    position: absolute;
+    top: 130px;
+    left: 200px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#word-display {
+    background-color: beige;
+    position: absolute;
+    top: 330px;
+    left: 250px;
+    display: flex;
+    gap: 4px;
+}
+
+#word-display p{
+    background-color: white;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    align-content: center;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+#gallows {
+    position: absolute;
+    top: 500px;
+    left: 200px;    
+    transform: rotateY(180deg);
+}
+
+#keyboard {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4px;
+    background-color: beige;
+    padding: 10px;
+
+}
+
+#keyboard div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+#keyboard button {
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 4px;
+    transition: background-color 0.5s;
+}
+
+#keyboard button:hover {
+    background-color: yellow;
+}
+
 #hangman-area {
     position: relative;
 }
@@ -6,17 +85,19 @@
     position:absolute;
     top: 575px;
     left: 385px;
-    
+    display: none;
 }
 
 #torse {
     position: absolute;
     top: 640px;
     left: 405px;
+    display: none;
 }
 
 #leftArm {
     position: absolute;
     top: 650px;
     left: 315px;
+    display: none;
 }

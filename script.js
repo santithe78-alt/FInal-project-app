@@ -1,6 +1,6 @@
 console.log("helloooo")
 let currWord = getRandomWord();
-
+console.log(currWord.length)
 function getRandomWord(){
     let movies = ['zombieland', 'john wick', 'titanic', 'matrix']
     let randomIndex = Math.floor(Math.random() * movies.length);
@@ -8,11 +8,14 @@ function getRandomWord(){
     return randomWord;
 }
 
-
-console.log(currWord)
-console.log(currWord.length)
-
-
+function lowWord() {
+    let wordDisplay = document.getElementById("word-display")
+    let displayString = "";
+    for (let i = 0; i < currWord.length; i++) {
+        let p = document.createElement("p");
+        wordDisplay.appendChild(p)
+    }
+}
 
 function keyClick(event) {
     let letter = event.target.innerText;
@@ -23,3 +26,4 @@ function keyClick(event) {
 function checkLetter(letter) {
     console.log(currWord.indexOf(letter));
 }
+
