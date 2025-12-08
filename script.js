@@ -39,6 +39,8 @@ let allps = document.querySelectorAll("#word-display p");
         console.log("correct")
     }
     else {
+        let buttonA = document.getElementById("A")
+            buttonA.innerText = "X";
         console.log("wrong")
     }
 }
