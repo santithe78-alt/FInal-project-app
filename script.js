@@ -27,8 +27,15 @@ function keyClick(event) {
 }
 
 function checkLetter(letter) {
-    //console.log(currWord.indexOf(letter));
+let allps = document.querySelectorAll("#word-display p");
     if (currWord.indexOf(letter) !== -1) {
+
+        for(let i = 0; i < currWord.length; i++) {
+            if (currWord[i] === letter){
+                allps[i].innerText = letter;
+            }
+            
+        }
         console.log("correct")
     }
     else {
