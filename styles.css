@@ -51,7 +51,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 0px;
+    right: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -88,20 +88,41 @@
 #head {
     position:absolute;
     top: 575px;
-    left: 385px;
-    display: none;
+    left: 335px;
+    display: ;
 }
 
 #torse {
     position: absolute;
-    top: 640px;
-    left: 405px;
-    display: none;
+    top: 660px;
+    left: 340px;
+    display: ;
 }
 
 #leftArm {
     position: absolute;
-    top: 650px;
-    left: 315px;
-    display: none;
+    top: 660px;
+    left: 255px;
+    display: ;
+}
+
+#rightArm {
+    position: absolute;
+    top: 660px;
+    left: 400px;
+    display: ;
+}
+
+#leftLeg {
+    position:absolute;
+    top: 780px;
+    left: 330px;
+    display: ;
+}
+
+#rightLeg {
+    position: absolute;
+    top: 780px;
+    left: 365px;
+    display: ;
 }

@@ -28,6 +28,7 @@ function keyClick(event) {
 
 function checkLetter(letter) {
 let allps = document.querySelectorAll("#word-display p");
+let button = document.getElementById(letter.toUpperCase());
     if (currWord.indexOf(letter) !== -1) {
 
         for(let i = 0; i < currWord.length; i++) {
@@ -39,8 +40,7 @@ let allps = document.querySelectorAll("#word-display p");
         console.log("correct")
     }
     else {
-        let buttonA = document.getElementById("A")
-            buttonA.innerText = "X";
+            button.innerText = "X";
         console.log("wrong")
     }
 }
