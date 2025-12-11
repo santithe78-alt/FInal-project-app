@@ -89,40 +89,40 @@
     position:absolute;
     top: 575px;
     left: 335px;
-    display: ;
+    display: none;
 }
 
 #torse {
     position: absolute;
     top: 660px;
     left: 340px;
-    display: ;
+    display: none;
 }
 
 #leftArm {
     position: absolute;
     top: 660px;
     left: 255px;
-    display: ;
+    display: none;
 }
 
 #rightArm {
     position: absolute;
     top: 660px;
     left: 400px;
-    display: ;
+    display: none;
 }
 
 #leftLeg {
     position:absolute;
     top: 780px;
     left: 330px;
-    display: ;
+    display: none;
 }
 
 #rightLeg {
     position: absolute;
     top: 780px;
     left: 365px;
-    display: ;
+    display: none;
 }
