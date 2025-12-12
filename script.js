@@ -5,7 +5,7 @@ let wrongGuesses = 0;
 console.log(currWord)
 console.log(currWord.length)
 function getRandomWord(){
-    let movies = ['zombieland', 'john wick', 'titanic', 'matrix']
+    let movies = ['zombieland', 'john wick', 'titanic', 'matrix','die hard','mad max','terminator','alien','blade runner','speed','mission impossible','fast and furious','gladiator','inception']
     let randomIndex = Math.floor(Math.random() * movies.length);
     let randomWord = movies[randomIndex]
     return randomWord;
