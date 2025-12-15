@@ -1,132 +1,229 @@
+/* General Styles */
 * {
     margin: 0;
-}
-
-.container {
-    position: relative;
-    background-image: url("bodyImages/background.png");
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.score-area {
-    position: absolute;
-    top: 130px;
-    left: 200px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-#word-display {
-    background-color: beige;
-    position: absolute;
-    top: 330px;
-    left: 250px;
-    display: flex;
-    gap: 4px;
-}
-
-#word-display p{
-    background-color: white;
-    font-size: 40px;
-    width: 60px;
-    height: 60px;
-    align-content: center;
-    text-align: center;
-    border-radius: 4px;
-    text-transform: uppercase;
-    font-family: sans-serif;
-}
-
-#gallows {
-    position: absolute;
-    top: 500px;
-    left: 200px;    
-    transform: rotateY(180deg);
-}
-
-#keyboard {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 4px;
-    background-color: #f5f5dc;
-    padding: 10px;
-
-}
-
-#keyboard div {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 4px;
-}
-
-#keyboard button {
-    border: none;
-    font-size: 20px;
-    background-color: white;
-    border-radius: 4px;
-    transition: background-color 0.5s;
-}
-
-#keyboard button:hover {
-    background-color: yellow;
-}
-
-#hangman-area {
-    position: relative;
-}
-
-#head {
-    position:absolute;
-    top: 575px;
-    left: 335px;
-    display: none;
-}
-
-#torse {
-    position: absolute;
-    top: 660px;
-    left: 340px;
-    display: none;
-}
-
-#leftArm {
-    position: absolute;
-    top: 660px;
-    left: 255px;
-    display: none;
-}
-
-#rightArm {
-    position: absolute;
-    top: 660px;
-    left: 400px;
-    display: none;
-}
-
-#leftLeg {
-    position:absolute;
-    top: 780px;
-    left: 330px;
-    display: none;
-}
-
-#rightLeg {
-    position: absolute;
-    top: 780px;
-    left: 365px;
-    display: none;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(236, 229, 208);
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+}
+
+/* Header Area */
+.score-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.score-area p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #495057;
+    margin: 0;
+}
+
+.score-area span {
+    color: #007bff;
+}
+
+/* Hangman Drawing Area */
+#hangman-area {
+    background: #fff;
+    border: 3px solid #dee2e6;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    min-height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hangman-area img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+}
+
+#gallows {
+    z-index: 1;
+}
+
+#head, #torse, #leftArm, #rightArm, #leftLeg, #rightLeg {
+    z-index: 2;
+    display: none; /* Hide initially */
+}
+
+#head {
+    position: absolute;
+    left: 295px;
+    top: 50px;
+    width: 30px;
+}
+#torse {
+    position: absolute;
+    left: 295px;
+    top: 90px;
+    width: 30px;
+}
+#leftArm {
+    position: absolute;
+    left: 265px;
+    top: 90px;
+    width: 30px;
+}
+#rightArm {
+position: absolute;
+left: 325px;
+top: 90px;
+width: 30px;
+}
+#leftLeg {
+position: absolute;
+left: 290px;
+top: 150px;
+width: 15px;
+}
+#rightLeg {
+position: absolute;
+left: 315px;
+top: 150px;
+width: 15px;
+}
+
+/* Word Display */
+#word-display {
+    font-size: 36px;
+    font-weight: bold;
+    color: #343a40;
+    margin: 30px 0;
+    letter-spacing: 10px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Keyboard Styles */
+#keyboard {
+    margin-top: 30px;
+}
+
+#keyboard div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+#keyboard button {
+    background: linear-gradient(145deg, #e9ecef, #dee2e6);
+    border: none;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #495057;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 45px;
+}
+
+#keyboard button:hover {
+    background: linear-gradient(145deg, #007bff, #0056b3);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+#keyboard button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#keyboard button:disabled {
+    background: #6c757d;
+    color: #adb5bd;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Space button styling */
+#keyboard button[id=" "] {
+    background: linear-gradient(145deg, #ffc107, #e0a800);
+    color: #212529;
+}
+
+#keyboard button[id=" "]:hover {
+    background: linear-gradient(145deg, #ffca2c, #e0a800);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .score-area {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    #word-display {
+        font-size: 24px;
+        letter-spacing: 5px;
+    }
+    
+    #keyboard button {
+        padding: 12px 16px;
+        font-size: 14px;
+        min-width: 40px;
+    }
+    
+    #hangman-area {
+        min-height: 250px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #word-display {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    
+    #keyboard button {
+        padding: 10px 12px;
+        font-size: 12px;
+        min-width: 35px;
+    }
 }
