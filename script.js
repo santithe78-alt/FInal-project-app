@@ -13,13 +13,18 @@ function getRandomWord(){
 
 function loadWord() {
     let wordDisplay = document.getElementById("word-display")
-    let displayString = "";
     for (let i = 0; i < currWord.length; i++) {
         let p = document.createElement("p");
-        wordDisplay.appendChild(p)
-        p.innerText = "_"
+        wordDisplay.appendChild(p);
+        
+        if (currWord[i] === " ") {
+            p.innerText = " ";
+        } else {
+            p.innerText = "_";
+        }
     }
 }
+
 
 function keyClick(event) {
     let letter = event.target.innerText;
@@ -77,12 +82,13 @@ function checkWin() {
     let allps = document.querySelectorAll("#word-display p");
     
     for(let i = 0; i < allps.length; i++) {
-        if (allps[i].innerText === "_") {
+        if (currWord[i] !== " " && allps[i].innerText === "_") {
             return false;
         }
     }
     return true;
 }
+
 
 function addPoints(){
     let scoreElement = document.getElementById("score");
